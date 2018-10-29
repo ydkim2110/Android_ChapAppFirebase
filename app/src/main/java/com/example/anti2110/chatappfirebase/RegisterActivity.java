@@ -92,6 +92,8 @@ public class RegisterActivity extends AppCompatActivity {
                             userMap.put("id", userId);
                             userMap.put("username", username);
                             userMap.put("imageURL", "default");
+                            userMap.put("status", "offline");
+                            userMap.put("search", username.toLowerCase());
 
                             dbRef.setValue(userMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
